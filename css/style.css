@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,h2 ,h3 ,h4{
+    font-weight: 700;
+}
+
+.side-box {
+  width: 20rem;
+  left: -16rem;
+}
+.side-hidden {
+  width: 16rem;
+}
+.side-shown {
+  width: 4rem;
+}
+.main-screen {
+  width: calc(100% - 4rem);
+  left: 4rem;
+}
+.cards-container {
+  width: 92%;
+  margin-inline: auto;
+}
+.search-form,
+.meal-screen 
+,.contact-form
+,.contact-form .alert
+{
+  display: none;
+}
+
+
+.layer p {
+  font-size: 10px;
+}
+
+.card , i ,li ,a ,button{
+    cursor: pointer;
+}
+
+.category-card ,.meal-card{
+overflow: hidden;
+
+    h3{
+        font-size: 2rem;
+        margin-bottom: 4px;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .layer{
+        transition: all 0.4s;
+        top: 100%;
+    }
+
+    &:hover .layer{
+        top:0%
+    }
+}
+
+.side-box,li{
+    transition: all 0.4s;
+}
+
+
+
+.loader {
+    --d:40px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    color: #ffffff;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: l27 1s infinite steps(8);
+  }
+  @keyframes l27 {
+    100% {transform: rotate(1turn)}
+  }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="icon" href="img/beef.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="overflow-x-hidden ">
+    <div class="side-box flex min-h-screen h-full z-10 absolute">
+      <div
+        class="side-hidden bg-black h-full flex flex-col justify-between text-white p-6"
+      >
+        <ul>
+          <li class="pb-5" id="search"><a>Search</a></li>
+          <li class="pb-5" id="categories"><a>Categories</a></li>
+          <li class="pb-5" id="area"><a>Area</a></li>
+          <li class="pb-5" id="ingredients"><a>Ingredients</a></li>
+          <li class="pb-5" id="contact"><a>Contact Us</a></li>
+        </ul>
+        <div class="side-footer">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <p class="">Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+
+      <div
+        class="side-shown bg-white h-full flex flex-col justify-between items-center p-2 py-4"
+      >
+        <img src="img/logo.png" alt="" class="w-12" />
+        <i class="fa-solid fa-bars fa-2x"></i>
+        <div class="icons flex flex-col gap-3">
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="main-screen bg-black min-h-screen flex-col items-center relative"
+    >
+      <div class="search-form flex mx-auto w-fit pt-7">
+        <input
+          type="text"
+          max="50"
+          name="by-name"
+          id="by-name"
+          placeholder="Search By Name"
+          class="bg-transparent border h-9 text-slate-50 rounded-md px-3 placeholder:text-slate-600"
+        />
+        <input
+          type="text"
+          max="50"
+          name="by-first"
+          id="by-first"
+          placeholder="Search By First Letter"
+          class="bg-transparent border h-9 text-slate-50 rounded-md px-3 placeholder:text-slate-600"
+        />
+      </div>
+
+      <div class="contact-form flex flex-col gap-2 h-screen w-full absolute bg-black justify-center items-center" >
+        <div class="form flex flex-wrap w-3/4 gab-1">
+        <input type="text" max="100" name="Name" id="Name" placeholder="Enter your Name" class="bg-white border h-7 rounded-md px-3 placeholder:text-slate-300 my-2 block" style="width: 45%; margin-inline: auto;" />
+        <input type="email" max="100" name="Email" id="Email" placeholder="Enter your Email" class="bg-white border h-7 rounded-md px-3 placeholder:text-slate-300 my-2 block" style="width: 45%; margin-inline: auto;" />
+        <div id="Name" class="alert mb-2 bg-red-200 text-red-800 p-2 w-[45%] mr-[52.5%] mx-auto text-sm  text-center rounded-md " >Special characters and numbers not allowed</div>
+        <div id="Email" class="alert mb-2 bg-red-200 text-red-800 p-2 w-[45%] ml-[52.5%] mx-auto text-sm  text-center rounded-md " >Email not valid *exemple@yyy.zzz</div>
+        <input type="text" max="13" name="Phone" id="Phone" placeholder="Enter your Phone" class="bg-white border h-7 rounded-md px-3 placeholder:text-slate-300 my-2 block" style="width: 45%; margin-inline: auto;" />
+        <input type="text" max="3" name="Age" id="Age" placeholder="Enter your Age" class="bg-white border h-7 rounded-md px-3 placeholder:text-slate-300 my-2 block" style="width: 45%; margin-inline: auto;" />
+        <div id="Phone" class="alert mb-2 bg-red-200 text-red-800 p-2 w-[45%] mr-[52.5%] mx-auto text-sm  text-center rounded-md " >Enter valid Phone Number</div>
+        <div id="Age" class="alert mb-2 bg-red-200 text-red-800 p-2 w-[45%] ml-[52.5%] mx-auto text-sm  text-center rounded-md " >Enter valid age</div>
+        <input type="password" max="30" name="Password" id="Password" placeholder="Enter your Password" class="bg-white border h-7 rounded-md px-3 placeholder:text-slate-300 my-2 block" style="width: 45%; margin-inline: auto;" />
+        <input type="password" max="30" name="Repassword" id="Repassword" placeholder="Repassword" class="bg-white border h-7 rounded-md px-3 placeholder:text-slate-300 my-2 block" style="width: 45%; margin-inline: auto;" />
+        <div id="Password" class="alert mb-2 bg-red-200 text-red-800 p-2 w-[45%] mr-[52.5%] mx-auto text-sm  text-center rounded-md " >Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+        <div id="Repassword" class="alert mb-2 bg-red-200 text-red-800 p-2 w-[45%] ml-[52.5%] mx-auto text-sm  text-center rounded-md " >Enter valid repassword</div>
+      </div>
+      <button class=" rounded border-red-800 bg-transparent text-red-800 border px-2 p-1 hover:bg-red-800 hover:text-white focus:border-red-700 focus:border-2" disabled  >submit</button>
+    </div>
+      <div
+        class="meal-screen min-h-screen p-5 bg-black w-full absolute text-white "
+      >
+        <div class="left-side w-1/3 p-4">
+          <img src="img/breakfast.png" alt="" class="rounded-md w-full" />
+          <h2 class="text-3xl">Lorem, ipsum dolor.</h2>
+        </div>
+        <div class="right-side w-2/3 p-4">
+          <h3 class="text-2xl">Instructions</h3>
+          <p>
+            Lorem ipsum dolor, sit amet Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Animi praesentium itaque dolore quas excepturi
+            eaque quibusdam. Fugiat doloremque similique earum molestias aliquid
+            facere soluta veritatis provident, quis harum delectus
+            molestiae.consectetur adipisicing elit. Pariatur ad, beatae a,
+            doloremque ipsa at consectetur doloribus totam in blanditiis aliquam
+            eligendi facere ex facilis suscipit harum laudantium quae minima.
+          </p>
+          <h3 class="mt-4 text-2xl">
+            Area : <span id="area-span">Lorem.</span>
+          </h3>
+          <h3 class="mt-4 text-2xl">
+            Category : <span id="category-span">Lorem.</span>
+          </h3>
+          <h3 class="mt-4 text-2xl">Recipes :</h3>
+          <div class="recipes m-4"></div>
+          <h3 class="mt-4 text-2xl">Tags :</h3>
+          <div class="tags m-4"></div>
+          <div class="links">
+            <a
+              href=""
+              id="Source"
+              class="bg-green-600 rounded-md p-2 inline-block px-4 m-0.5"
+              >Source</a
+            >
+            <a
+              href=""
+              id="Youtube"
+              class="bg-red-600 rounded-md p-2 inline-block px-4 m-0.5"
+              >Youtube</a
+            >
+          </div>
+        </div>
+      </div>
+<div class="loader-box absolute h-screen w-full bg-black z-[2] flex justify-center items-center">
+      <div class="loader ">
+       </div> 
+      </div>
+      <div class="cards-container flex flex-wrap justify-start py-9">
+      </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
+
+<!--  bg-slate-100 md:bg-orange-100 lg:bg-teal-200 xl:bg-sky-600 2xl:bg-yellow-200  sm:bg-red-600 -->
