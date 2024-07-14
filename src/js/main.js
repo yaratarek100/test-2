@@ -135,7 +135,13 @@ mealClick();
 
 
 // -----------
-$(".side-shown>i").on("click", () => {
+$("#nav-b").on("click", function() {
+  if ($(this).html() === '<i class="fa-solid fa-xmark fa-2x"></i>') {
+    $(this).html('<i class="fa-solid fa-bars fa-2x"></i>');
+    $(".side-box").css("left", "-16rem");
+  } else {
+    $(this).html('<i class="fa-solid fa-xmark fa-2x"></i>');
     $(".side-box").css("left", "0");
+  }
 });
 
